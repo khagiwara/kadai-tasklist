@@ -33,6 +33,10 @@ class TasksController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 7bca08f931661751cca7982fefb8e62716915fdf
         $task = new Tasks;
         
         return view('tasks.create', [
@@ -50,6 +54,7 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $this->validate($request, [
             'status' => 'required|max:10',
             'content' => 'required|max:255',
@@ -58,6 +63,10 @@ class TasksController extends Controller
         $task = new Tasks;
         $task->content = $request->content;
         $task->status = $request->status;
+=======
+        $task = new Tasks;
+        $task->content = $request->content;
+>>>>>>> 7bca08f931661751cca7982fefb8e62716915fdf
         $task->save();
 
         return redirect('/');
@@ -91,6 +100,10 @@ class TasksController extends Controller
             'task' => $task
             ]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7bca08f931661751cca7982fefb8e62716915fdf
     }
 
     /**
@@ -102,6 +115,7 @@ class TasksController extends Controller
      */
     public function update(Request $request, $id)
     {
+<<<<<<< HEAD
         $this->validate($request, [
             'status' => 'required|max:10',
             'content' => 'required|max:255',
@@ -110,6 +124,10 @@ class TasksController extends Controller
         $task = Tasks::find($id);
         $task->content = $request->content;
         $task->status = $request->status;
+=======
+        $task = Tasks::find($id);
+        $task->content = $request->content;
+>>>>>>> 7bca08f931661751cca7982fefb8e62716915fdf
         $task->save();
         
         return redirect('/');
