@@ -3,14 +3,10 @@
 @section( 'content' )
 
     <h1>id= {{ $task->id }} のお仕事詳細ページ</h1>
-    
-<<<<<<< HEAD
     <p>新著状況：{{ config( 'local.' . $task->status) }}</p>    
     <p>仕事内容：{{ $task->content }}</p>
-=======
+
     <p>{{ $task->content }}</p>
->>>>>>> 7bca08f931661751cca7982fefb8e62716915fdf
-    
     
     {!! link_to_route('tasks.edit', 'この仕事を編集', ['id' => $task->id]) !!}
     

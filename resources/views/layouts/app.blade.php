@@ -6,11 +6,8 @@
     </head>
 
     <body>
-<<<<<<< HEAD
-        @include('commons.error_messages')
-        
-=======
->>>>>>> 7bca08f931661751cca7982fefb8e62716915fdf
+       @include('commons.error_messages')
+ 
         @yield('content')
     </body>
 </html>
