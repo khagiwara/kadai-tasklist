@@ -27,13 +27,5 @@
     </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
     
 @endsection
