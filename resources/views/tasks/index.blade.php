@@ -2,8 +2,9 @@
 
 @section('content')
 
-    <h1>仕事一覧</h1>
 
+@if (Auth::check())
+    <h1>{{ Auth::user()->name }}の仕事一覧</h1>
     @if (count($tasks) > 0)
         <table class="table table-striped">
             <thead>
@@ -26,5 +27,16 @@
 
     @endif
 
-  {!! link_to_route('tasks.create', '新規仕事の作成',null,['class' => 'btn btn-primary']) !!}
+      {!! link_to_route('tasks.create', '新規仕事の作成',null,['class' => 'btn btn-primary']) !!}
+@else
+        <div class="center jumbotron">
+            <div class="text-center">
+                <h1>Welcome to the TaskList</h1>
+                {!! link_to_route('signup.get', 'Sign up now!', null, ['class' => 'btn btn-lg btn-primary']) !!}
+            </div>
+        </div> 
+  
+  
+  
+@endif
 @endsection
